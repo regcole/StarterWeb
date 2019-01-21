@@ -1,0 +1,92 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Course Schema",
+  "required": [
+    "name",
+    "default_toolbox",
+    "default_avatar_url"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "sample"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "default_toolbox": {
+      "$id": "#/properties/default_toolbox",
+      "type": "object",
+      "title": "The Default_toolbox Schema"
+    },
+    "default_avatar_url": {
+      "$id": "#/properties/default_avatar_url",
+      "type": "string",
+      "title": "The Default_avatar_url Schema",
+      "default": "",
+      "examples": [
+        "default.com"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "activities": {
+      "$id": "#/properties/activities",
+      "type": "array",
+      "title": "The Activities Schema",
+      "items": {
+        "$id": "#/properties/activities/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "name",
+          "special_label",
+          "avatar_url",
+          "toolbox"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/activities/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "default_name"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "special_label": {
+            "$id": "#/properties/activities/items/properties/special_label",
+            "type": "string",
+            "title": "The Special_label Schema",
+            "default": "",
+            "examples": [
+              "midcourse"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "avatar_url": {
+            "$id": "#/properties/activities/items/properties/avatar_url",
+            "type": "string",
+            "title": "The Avatar_url Schema",
+            "default": "",
+            "examples": [
+              "avatarURL"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "toolbox": {
+            "$id": "#/properties/activities/items/properties/toolbox",
+            "type": "object",
+            "title": "The Toolbox Schema"
+          }
+        }
+      }
+    }
+  }
+}
