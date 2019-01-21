@@ -23,7 +23,57 @@
     "default_toolbox": {
       "$id": "#/properties/default_toolbox",
       "type": "object",
-      "title": "The Default_toolbox Schema"
+      "title": "The Default toolbox",
+      "required": [
+        "categories"
+      ],
+      "properties": {
+        "categories": {
+          "$id": "#/properties/default_toolbox/properties/categories",
+          "type": "array",
+          "title": "Categories",
+          "items": {
+            "$id": "#/properties/default_toolbox/properties/categories/items",
+            "type": "object",
+            "title": "Category Schema",
+            "required": [
+              "name",
+              "blocks"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/default_toolbox/properties/categories/items/properties/name",
+                "type": "string",
+                "title": "Category Name",
+                "default": "",
+                "enum": [
+                  "jett_actions",
+                  "dog",
+                  "bird",
+                  "reptile",
+                  "other"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "blocks": {
+                "$id": "#/properties/default_toolbox/properties/categories/items/properties/blocks",
+                "type": "array",
+                "title": "The Blocks Schema",
+                "items": {
+                  "$id": "#/properties/default_toolbox/properties/categories/items/properties/blocks/items",
+                  "type": "string",
+                  "title": "The Items Schema",
+                  "default": "",
+                  "examples": [
+                    "robo_dance"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
     },
     "default_avatar_url": {
       "$id": "#/properties/default_avatar_url",
