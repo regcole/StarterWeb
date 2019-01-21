@@ -9,7 +9,7 @@ module.exports = {
     entry: {
         main: './src/index.js',
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         contentBase: './dist'
     },
