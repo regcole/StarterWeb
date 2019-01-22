@@ -1,0 +1,80 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "Create/Edit Course",
+  "required": [
+    "name",
+    "default_avatar_url"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "Course Name",
+      "default": "",
+      "examples": [
+        "sample"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "default_avatar_url": {
+      "$id": "#/properties/default_avatar_url",
+      "type": "string",
+      "title": "Default Avatar URL",
+      "default": "",
+      "examples": [
+        "default.com"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "activities": {
+      "$id": "#/properties/activities",
+      "type": "array",
+      "title": "The Activities",
+      "items": {
+        "$id": "#/properties/activities/items",
+        "type": "object",
+        "title": "Activity",
+        "required": [
+          "name",
+          "special_label",
+          "avatar_url"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/activities/items/properties/name",
+            "type": "string",
+            "title": "Activity Name ",
+            "default": "",
+            "examples": [
+              "default_name"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "special_label": {
+            "$id": "#/properties/activities/items/properties/special_label",
+            "type": "string",
+            "title": "Activity Special Label",
+            "default": "",
+            "examples": [
+              "midcourse"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "avatar_url": {
+            "$id": "#/properties/activities/items/properties/avatar_url",
+            "type": "string",
+            "title": "Activity Avatar URL",
+            "default": "",
+            "examples": [
+              "avatarURL"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}
